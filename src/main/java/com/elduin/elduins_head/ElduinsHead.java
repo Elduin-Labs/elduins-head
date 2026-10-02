@@ -1,5 +1,6 @@
 package com.elduin.elduins_head;
 
+import com.elduin.elduins_head.content.ModBlocks;
 import com.elduin.elduins_head.platform.Platform;
 
 import net.minecraft.resources.Identifier;
@@ -21,6 +22,7 @@ public class ElduinsHead {
 	public static void onInitialize() {
 		LOGGER.info("Initializing {} on {}", MOD_ID, ElduinsHead.xplat().loader());
 		LOGGER.debug("{}: { version: {}; friendly_name: {} }", MOD_ID, MOD_VERSION, MOD_FRIENDLY_NAME);
+		ModBlocks.init();
 	}
 
 	public static void onInitializeClient() {

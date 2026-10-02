@@ -16,6 +16,29 @@ work with Elduin live in `~/.claude/CLAUDE.md`.
     primary version   1.21.11               (the one he plays)
     java              21 for 1.21.x, 25 for 26.x — Gradle picks this per version
 
+## How it works
+
+- A glowstone frame (Nether-portal shape, `portal/GlowstoneFrame`, copied from
+  the Elduin Portal mod) plus a water bucket (`portal/PortalFilling`, a
+  `UseBlockCallback`) fills with `head_portal`. The bucket is emptied unless
+  the player is in creative.
+- `HeadPortalBlock` is a vanilla-style `Portal`. Only players travel.
+  `portal/HeadTravel`: from anywhere -> the `elduins_head:head` dimension;
+  from the head -> `findRespawnPositionAndUseSpawnBlock`, i.e. your bed, or
+  the world spawn.
+- The head dimension is a void flat world. `head/Head.buildIfNeeded` builds
+  the room the first time anyone arrives (checks for a brain block at
+  (0, 82, 3)): pink walls, two eyes in the north wall with see-through black
+  glass pupils, a brain on a stem, and a lit return portal at z = -14. You
+  arrive at (0.5, 64, -11.5) facing the brain. Electric sparks fly off the
+  brain while someone is in there.
+- The dimension type uses the same field layout as the Elduin Portal's Moon,
+  which was checked against both versions' codecs.
+- Textures and the icon: `tools/textures.py` (no Mojang art).
+- Version differences: 26 folded coloured blocks into `ColorCollection`
+  fields (`Head` eye colours), and Fabric's creative-tab events
+  (`FabricEventSubscriber`).
+
 The mod id is baked into save files. Once a world has been played with this mod,
 **changing the mod id breaks that world.** Rename the display name freely;
 never rename the mod id.

@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "axis=x": { "model": "elduins_head:block/head_portal_ns" },
+    "axis=z": { "model": "elduins_head:block/head_portal_ew" }
+  }
+}

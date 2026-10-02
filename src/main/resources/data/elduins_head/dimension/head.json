@@ -1,0 +1,13 @@
+{
+  "type": "elduins_head:head",
+  "generator": {
+    "type": "minecraft:flat",
+    "settings": {
+      "biome": "elduins_head:head",
+      "layers": [],
+      "lakes": false,
+      "features": false,
+      "structure_overrides": []
+    }
+  }
+}
