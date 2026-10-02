@@ -1,6 +1,6 @@
-# <MOD_DISPLAY_NAME>
+# Elduin's Head
 
-<One plain sentence: what this mod does, in Elduin's words.>
+A glowstone portal you fill with a water bucket takes you inside Elduin's head, where you can see his brain. Do it again to go home to your bed.
 
 This file is read automatically whenever Claude Code is opened in this folder.
 Everything below is specific to this one mod. The general rules about how to
@@ -8,12 +8,12 @@ work with Elduin live in `~/.claude/CLAUDE.md`.
 
 ## Facts about this mod
 
-    mod id            <mod_id>              (underscores — never change this)
-    slug              <mod-slug>            (repo name and Modrinth slug)
-    package           <com.elduin.mod_id>
+    mod id            elduins_head          (underscores — never change this)
+    slug              elduins-head          (repo name and Modrinth slug)
+    package           com.elduin.elduins_head
     loader            fabric                (only fabric — see below)
-    minecraft         <1.21.11, 26.2>
-    primary version   <1.21.11>             (the one he plays)
+    minecraft         1.21.11, 26.2
+    primary version   1.21.11               (the one he plays)
     java              21 for 1.21.x, 25 for 26.x — Gradle picks this per version
 
 The mod id is baked into save files. Once a world has been played with this mod,
